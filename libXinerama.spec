@@ -1,11 +1,10 @@
 Summary: X.Org X11 libXinerama runtime library
 Name: libXinerama
-Version: 1.1
-Release: 1%{?dist}
+Version: 1.1.2
+Release: 2%{?dist}
 License: MIT
 Group: System Environment/Libraries
 URL: http://www.x.org
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 Source0: http://xorg.freedesktop.org/archive/individual/lib/%{name}-%{version}.tar.bz2
 
@@ -13,7 +12,6 @@ BuildRequires: pkgconfig
 BuildRequires: xorg-x11-proto-devel
 BuildRequires: libX11-devel
 BuildRequires: libXext-devel
-BuildRequires: libXau-devel
 
 %description
 X.Org X11 libXinerama runtime library
@@ -22,7 +20,6 @@ X.Org X11 libXinerama runtime library
 Summary: X.Org X11 libXinerama development package
 Group: Development/Libraries
 Requires: %{name} = %{version}-%{release}
-Requires: xorg-x11-proto-devel
 
 %description devel
 X.Org X11 libXinerama development package
@@ -64,6 +61,24 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/X11/extensions/panoramiXext.h
 
 %changelog
+* Thu Jul 19 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1.2-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
+* Thu Mar 08 2012 Adam Jackson <ajax@redhat.com> 1.1.2-1
+- libXinerama 1.1.2
+
+* Fri Jan 13 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1.1-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
+* Mon Feb 07 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
+
+* Thu Oct 28 2010 Adam Jackson <ajax@redhat.com> 1.1.1-1
+- libXinerama 1.1.1
+
+* Thu Feb 04 2010 Peter Hutterer <peter.hutterer@redhat.com> 1.1-2
+- Remove unnecessary BR on libXau-devel
+
 * Tue Oct 06 2009 Adam Jackson <ajax@redhat.com> 1.1-1
 - libXinerama 1.1
 
