@@ -5,7 +5,7 @@
 Summary: X.Org X11 libXinerama runtime library
 Name: libXinerama
 Version: 1.1.3
-Release: 1%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
+Release: 2.1%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
 License: MIT
 Group: System Environment/Libraries
 URL: http://www.x.org
@@ -76,6 +76,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/X11/extensions/panoramiXext.h
 
 %changelog
+* Wed Feb 12 2014 Adam Jackson <ajax@redhat.com> 1.1.3-2.1
+- Mass rebuild
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.1.3-2
+- Mass rebuild 2013-12-27
+
 * Fri May 31 2013 Peter Hutterer <peter.hutterer@redhat.com> 1.1.3-1
 - libXinerama 1.1.3
 
